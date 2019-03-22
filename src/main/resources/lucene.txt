@@ -1,0 +1,15 @@
+
+IndexWriter：
+	创建索引，删除索引，更新索引
+IndexSearcher：
+	查找索引
+
+Analyzer分词器：
+	单字分词器（StandarAnalyzer）：将文本分割成单个字建立索引
+	二分法分词器（CJAnalyzer）：将文本分割成二个字建立索引
+	IK分词器（IKAnalyzer）：将文本分割成三个字，两个字，一个字的形式建立索引
+	
+将数据对象通过 k-v的形式放入到 Field对象中，然后将多个Field保存到Document中，通过IndexWriter创建索引
+
+将查询条件通过Query进行传递，使用IndexSearcher进行查找，IndexWriter和IndexSearcher要使用相同的分词器.
+
